@@ -1,0 +1,36 @@
+@import "card"
+@import "column"
+
+$bg-color: #bbb;
+$board-color: #fff;
+
+body {
+	background-color: $bg-color;
+}
+
+.board {
+	width: 900px;
+	height: 600px;
+	background-color: $board-color;
+	margin: 5% auto;
+	border: 10px solid #481E09;
+
+
+		h1 {
+			text-align: center;
+
+		}
+
+		li {
+			list-style-type: none;
+			max-width: 100px;
+			font-size: 20px;
+			margin: 0;
+		}
+
+		button {
+			border-radius: 5px;
+			background: none;
+		}
+
+}

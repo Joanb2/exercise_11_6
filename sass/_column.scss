@@ -1,0 +1,17 @@
+.column {
+	width: 290px;
+	float: left;
+	margin: 3px;
+	border-right: 1px dashed #000;
+		&:last-of-type {
+			border-right: none;
+		}
+
+	h2 {
+		display: block;
+		background-color: #fff;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+}

@@ -26,7 +26,7 @@ $(function() {
         		self.removeColumn();
 			});
 		    $columnAddCard.on('click', function(event) {
-        		self.addCard(new Card(prompt("Enter the name of the card")));
+        		self.addCard(new Card());
 			});
 
 		    $column.append($columnTitle)
