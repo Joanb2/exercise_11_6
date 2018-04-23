@@ -1,5 +1,5 @@
 $(function() {
-  
+
 	function randomString() {
 	    var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ';
 	    var str = '';
@@ -8,6 +8,7 @@ $(function() {
 	    }
 	    return str;
 	}
+		  
 
 	function Column(name) {
 	    var self = this;
@@ -25,8 +26,8 @@ $(function() {
 			$columnDelete.on('click', function() {
         		self.removeColumn();
 			});
-		    $columnAddCard.on('click', function(event) {
-        		self.addCard(new Card());
+		    $columnAddCard.click(function() {
+			    self.addCard(new Card(Input()));
 			});
 
 		    $column.append($columnTitle)
@@ -48,6 +49,15 @@ $(function() {
 	    }
 	};
 
+	function Input() {
+	 var $cardInput = $('#card-input').val();
+	 return $cardInput;	
+	}
+
+	$('#card-input').tooltip({
+		content: 'Enter name of the card, and click "Add a card"'
+    });
+
 
   	function Card(description) {
 		var self = this;
@@ -68,7 +78,8 @@ $(function() {
 			$card.append($cardDelete)
 				.append($cardDescription);
 
-			return $card;
+
+				return $card;
 		}
 	    
 	}
@@ -90,7 +101,7 @@ $(function() {
 
 	function initSortable() {
 	   $('.column-card-list').sortable({
-	     connectWith: '.column-card-list',
+	     connectWith: '.column-card-list',  				
 	     placeholder: 'card-placeholder'
 	   }).disableSelection();
 	 }
