@@ -51,7 +51,6 @@ $(function() {
 
 	function input() {
 		 var $cardInput = $('#card-input').val();	
-
 	    return $cardInput;
 	}
 
