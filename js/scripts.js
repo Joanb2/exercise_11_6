@@ -27,7 +27,7 @@ $(function() {
         		self.removeColumn();
 			});
 		    $columnAddCard.click(function() {
-			    self.addCard(new Card(Input()));
+			    self.addCard(new Card(input()));
 			});
 
 		    $column.append($columnTitle)
@@ -49,13 +49,14 @@ $(function() {
 	    }
 	};
 
-	function Input() {
-	 var $cardInput = $('#card-input').val();
-	 return $cardInput;	
+	function input() {
+		 var $cardInput = $('#card-input').val();	
+
+	    return $cardInput;
 	}
 
 	$('#card-input').tooltip({
-		content: 'Enter name of the card, and click "Add a card"'
+		content: '<p style=\"color:white;">Enter name of the card and click "Add a card"</p>',
     });
 
 
