@@ -50,9 +50,15 @@ $(function() {
 	};
 
 	function input() {
-		 var $cardInput = $('#card-input').val();	
+		var $cardInput = $('#card-input').val();	
 	    return $cardInput;
 	}
+
+	$('#card-input').keydown(function(e) {
+	    if (e.keyCode == 13) {
+	        e.preventDefault();
+	    }
+	});
 
 	$('#card-input').tooltip({
 		content: '<p style=\"color:white;">Enter name of the card and click "Add a card"</p>',
