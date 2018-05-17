@@ -1,0 +1,43 @@
+$head-2: #fff;
+$hover: #FFD503;
+$font-f: 'Kalam', cursive;
+
+.column {
+	width: 280px;
+	float: left;
+	margin-left: 20px;
+
+	h2 {
+		display: inline-block;
+		margin: 20px 0 20px 60px;
+		text-align: center;
+		color: $head-2;
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+
+	>button {
+		display: block;
+		margin: 0 auto;
+		padding: 3px 5px;
+		font-family: inherit;
+		font-size: 18px;
+		cursor: pointer;
+		background-color: inherit;
+		border: none;
+		color: $head-2;
+			&:hover {
+				color: $hover;
+			}
+	}
+
+	.add-card {
+		display: block;
+	}
+
+	.btn-delete {
+		display: inline-block;
+		margin: 0 5px;
+	}
+
+}

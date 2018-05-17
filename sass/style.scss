@@ -1,0 +1,83 @@
+@import "card";
+@import "column";
+
+$head-color: #8C0D00;
+$font-f: 'Kalam', cursive;
+
+body {
+	font-family: $font-f;
+	margin: 0;
+	padding: 0;
+
+	form {
+		margin: 30px 40px;
+		label {
+			color: $head-color;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 20px;
+		}
+		input {
+			background: rgba(0,0,0, .4);
+			border: none;
+				&[type=text] {
+					color: #fff;
+					outline: none;
+					font-family: inherit;
+				}
+		}
+	}
+
+	.ui-helper-hidden-accessible {
+		display: none;
+	}
+}
+
+.jumbotron {
+	background-image: url("https://images.pexels.com/photos/917479/pexels-photo-917479.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+	object-fit: cover;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+	background-size: 100%;
+
+}
+
+.board {
+	width: 900px;
+	min-height: 700px;
+	margin: 5% auto;
+
+
+		h1 {
+			text-align: center;
+			font-family: 'Permanent Marker', cursive;
+			color: $head-color;
+			font-size: 40px;
+		}
+
+		li {
+			list-style-type: none;
+			margin: 10px;
+
+			p {
+				text-align: center;
+				margin: 0;
+				font-size: 18px;
+			}
+		}
+
+		>button {
+			font-family: inherit;
+			font-size: 20px;
+			background: inherit;
+			border: none;
+			cursor: pointer;
+			color: $head-2;
+			margin: 0 370px 10px 370px;
+				&:hover {
+					color: $hover;
+				}
+		}
+
+}
